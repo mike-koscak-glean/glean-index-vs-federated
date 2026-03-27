@@ -1,0 +1,873 @@
+/* ========================================
+   Scene 0 — Title / Cold Open
+   ======================================== */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 28px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-pill);
+  max-width: 820px;
+  width: 100%;
+}
+
+.search-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+  color: var(--glean-green);
+  font-weight: 300;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.path-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+  max-width: 820px;
+  margin-top: 20px;
+}
+
+.path-card {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.path-card-left {
+  background: rgba(255, 80, 80, 0.08);
+  border: 1px solid rgba(255, 80, 80, 0.2);
+}
+
+.path-card-right {
+  background: rgba(216, 253, 73, 0.06);
+  border: 1px solid rgba(216, 253, 73, 0.25);
+}
+
+.path-card-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center, rgba(216, 253, 73, 0.1) 0%, transparent 70%);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.path-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.path-card-icon-glean {
+  background: rgba(216, 253, 73, 0.12);
+}
+
+.path-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.path-card p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+/* ========================================
+   Scene 1 — Federated / MCP
+   ======================================== */
+
+.fed-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  align-items: center;
+  flex: 1;
+  min-height: 0;
+}
+
+.fed-visual {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hub-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 24px;
+  background: rgba(255, 80, 80, 0.1);
+  border: 1px solid rgba(255, 80, 80, 0.3);
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.hub-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #ff8080;
+}
+
+.fed-apps {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fed-app-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fed-line-container {
+  width: 120px;
+  position: relative;
+  height: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.fed-line {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transform-origin: left;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.fed-line-slow {
+  background: rgba(255, 80, 80, 0.5);
+}
+
+.fed-latency {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+}
+
+.fed-latency-slow {
+  color: #ff6060;
+  animation: pulseSlow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.fed-app-node {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.fed-app-slow {
+  border-color: rgba(255, 80, 80, 0.3);
+  background: rgba(255, 80, 80, 0.08);
+}
+
+.fed-app-name {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.fed-results {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.fed-results-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 4px;
+}
+
+.fed-results-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.fed-result-card {
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ========================================
+   Scene 2 — Glean Indexing
+   ======================================== */
+
+.idx-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  flex: 1;
+  min-height: 0;
+}
+
+.idx-connectors {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  width: 100%;
+}
+
+.idx-apps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 200px;
+  justify-content: center;
+}
+
+.idx-app {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.idx-app-more {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.idx-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 160px;
+  position: relative;
+}
+
+.idx-particle {
+  width: 6px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--glean-green);
+  opacity: 0.6;
+}
+
+.idx-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 32px;
+  background: rgba(52, 60, 237, 0.2);
+  border: 2px solid rgba(216, 253, 73, 0.3);
+  border-radius: var(--radius-lg);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--glean-green);
+}
+
+.idx-layers {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.idx-layer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.idx-graph {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 5/3;
+  position: relative;
+}
+
+.idx-graph-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.idx-badge {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 2px 8px;
+  background: rgba(216, 253, 73, 0.15);
+  border: 1px solid rgba(216, 253, 73, 0.3);
+  border-radius: var(--radius-pill);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--glean-green);
+  white-space: nowrap;
+}
+
+/* ========================================
+   Scene 3 — Comparison Results
+   ======================================== */
+
+.results-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.result-card {
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.result-card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.result-app-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.result-buried {
+  border-color: rgba(255, 80, 80, 0.2);
+  background: rgba(255, 80, 80, 0.06);
+}
+
+.result-highlight {
+  border-color: rgba(216, 253, 73, 0.3);
+  background: rgba(216, 253, 73, 0.06);
+}
+
+/* ========================================
+   Scene 4 & 5 — Agent layouts
+   ======================================== */
+
+.agent-layout {
+  display: flex;
+  gap: 28px;
+  width: 100%;
+  align-items: flex-start;
+  flex: 1;
+  min-height: 0;
+}
+
+.agent-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  min-height: 0;
+}
+
+.agent-box-fed {
+  background: rgba(255, 80, 80, 0.05);
+  border: 1px solid rgba(255, 80, 80, 0.15);
+}
+
+.agent-box-glean {
+  background: rgba(52, 60, 237, 0.08);
+  border: 1px solid rgba(216, 253, 73, 0.15);
+}
+
+.agent-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.agent-header-glean {
+  color: var(--glean-green);
+}
+
+.context-window {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.context-window-clean {
+  border-color: rgba(216, 253, 73, 0.15);
+  max-height: 200px;
+}
+
+.context-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.context-snippets {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.context-snippet {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.context-snippet-ok {
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.context-snippet-bad {
+  background: rgba(255, 80, 80, 0.08);
+  border: 1px solid rgba(255, 80, 80, 0.15);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.context-snippet-good {
+  background: rgba(216, 253, 73, 0.08);
+  border: 1px solid rgba(216, 253, 73, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.context-snippet-text {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.context-alert {
+  color: #ff6060;
+  flex-shrink: 0;
+}
+
+.context-overflow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: rgba(255, 80, 80, 0.6);
+  padding-top: 4px;
+}
+
+.context-overflow-bar {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(255,80,80,0.3) 0%, rgba(255,80,80,0.1) 100%);
+}
+
+.agent-reasoning {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 180, 80, 0.8);
+  padding: 8px 12px;
+  background: rgba(255, 180, 80, 0.08);
+  border-radius: var(--radius-md);
+}
+
+/* Glean flow beam */
+.glean-flow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.glean-query-beam {
+  height: 3px;
+  flex: 1;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--glean-blue), var(--glean-green));
+  transform-origin: left;
+}
+
+.glean-index-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(52, 60, 237, 0.2);
+  border: 1px solid rgba(216, 253, 73, 0.2);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--glean-green);
+  white-space: nowrap;
+}
+
+/* Answer card */
+.answer-card {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(216, 253, 73, 0.2);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answer-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--glean-green);
+}
+
+.answer-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.answer-section-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.answer-section-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ========================================
+   Scene 6 — Architecture
+   ======================================== */
+
+.arch-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  flex: 1;
+  min-height: 0;
+}
+
+.arch-visual {
+  width: 100%;
+  max-width: 800px;
+  flex: 1;
+  position: relative;
+  min-height: 300px;
+}
+
+.arch-client {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.arch-client-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+.arch-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.arch-mcp-band {
+  position: absolute;
+  top: 38%;
+  left: 10%;
+  right: 10%;
+  padding: 8px 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.4);
+  transform-origin: center;
+  z-index: 2;
+}
+
+.arch-glean-core {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 40px;
+  background: rgba(52, 60, 237, 0.15);
+  border: 2px solid rgba(216, 253, 73, 0.3);
+  border-radius: var(--radius-lg);
+  z-index: 3;
+  overflow: hidden;
+}
+
+.arch-glean-glow {
+  position: absolute;
+  inset: -30px;
+  background: radial-gradient(ellipse, rgba(52, 60, 237, 0.4) 0%, rgba(216, 253, 73, 0.1) 50%, transparent 70%);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.arch-glean-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--glean-green);
+  position: relative;
+  z-index: 1;
+}
+
+.arch-glean-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.arch-packet {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--glean-blue-light, #6B71F5);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.arch-packet-resp {
+  background: var(--glean-green);
+}
+
+/* ========================================
+   Scene 7 — Final Comparison
+   ======================================== */
+
+.compare-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.compare-header-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 1fr;
+  gap: 16px;
+  align-items: end;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.compare-col-header {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.compare-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.compare-metric-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.compare-bar-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  position: relative;
+}
+
+.compare-bar {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  min-width: 2px;
+}
+
+.compare-bar-fed {
+  background: linear-gradient(90deg, rgba(255, 80, 80, 0.4), rgba(255, 80, 80, 0.7));
+}
+
+.compare-bar-glean {
+  background: linear-gradient(90deg, rgba(52, 60, 237, 0.5), rgba(216, 253, 73, 0.7));
+}
+
+.compare-bar-value {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 10px;
+}
+
+.final-quote {
+  text-align: center;
+  padding: 24px;
+  max-width: 700px;
+}
+
+.final-quote-main {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.final-highlight {
+  color: var(--glean-green);
+  font-weight: 800;
+}
+
+.final-tagline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(216, 253, 73, 0.3);
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--glean-green);
+}
