@@ -42,15 +42,15 @@ This is the difference between a pile of documents and actual understanding.
 ---
 
 ## Scene 3 — Federated vs Indexed Results
-**~40 seconds**
+**~45 seconds**
 
-Same query, side by side. Look at the difference.
+Same query, side by side. The difference is immediate.
 
-On the left, federated results: old closed-lost opportunities, archived tickets, an outdated runbook. And buried at position six — a Slack thread where the customer is *threatening to churn*. The most critical insight in the entire result set, and your team would never see it.
+On the left, federated results: a list of links, grouped by app. Half of them are stale — closed-lost opportunities, archived tickets, an outdated runbook. And buried at position six, a Slack thread where the customer is *threatening to churn*. The most critical insight in the entire result set, and it's invisible.
 
-On the right, Glean surfaces the Customer 360 deck as the best answer. The churn escalation thread is at position two. The active $1.2M opportunity, the P1 bug, the QBR deck — all ranked by 60+ signals: ownership, recency, view count, org graph proximity, account context.
+Now look at the right side. Glean doesn't just return links — it returns an *answer*. At the top, an AI-generated Customer 360: deal value, churn risk, open P1, executive sponsor change. Below that, suggested next actions — schedule an EBR, escalate the bug, share the roadmap. Then a key contact card with the account owner. And *then* the supporting documents — each with rich context: who owns it, how many times it's been viewed, whether you were in the meeting where it was discussed.
 
-Federated search ranks by app priority. Glean ranks by business relevance. That's the difference between missing a churn signal and catching it.
+This is the difference between a search engine and a knowledge engine. Federated gives you fragments to sift through. Glean gives you understanding — synthesized, ranked, actionable, and permission-verified.
 
 ---
 

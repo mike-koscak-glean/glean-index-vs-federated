@@ -417,13 +417,150 @@
 }
 
 .result-buried {
-  border-color: rgba(255, 80, 80, 0.2);
+  border-color: rgba(255, 80, 80, 0.25);
   background: rgba(255, 80, 80, 0.06);
+}
+
+.result-dim {
+  opacity: 0.45;
+}
+
+.result-tag {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.result-tag-dim {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.result-tag-red {
+  background: rgba(255, 80, 80, 0.15);
+  color: #ff8080;
+  animation: pulseSlow 1.5s ease-in-out infinite;
 }
 
 .result-highlight {
   border-color: rgba(216, 253, 73, 0.3);
   background: rgba(216, 253, 73, 0.06);
+}
+
+.result-card-glean {
+  border-color: rgba(216, 253, 73, 0.12);
+  background: rgba(216, 253, 73, 0.03);
+}
+
+.result-meta {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 2px;
+}
+
+.result-verified {
+  color: var(--glean-green);
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Glean AI answer card */
+.glean-answer-card {
+  background: linear-gradient(135deg, rgba(52, 60, 237, 0.12) 0%, rgba(216, 253, 73, 0.08) 100%);
+  border: 1px solid rgba(216, 253, 73, 0.25);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.glean-answer-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--glean-green);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.glean-answer-body {
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.glean-answer-body strong {
+  color: var(--glean-white);
+}
+
+.glean-answer-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.glean-action-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  background: rgba(216, 253, 73, 0.1);
+  border: 1px solid rgba(216, 253, 73, 0.2);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--glean-green);
+  cursor: default;
+}
+
+/* People card */
+.glean-people-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+}
+
+.glean-people-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+.glean-people-name {
+  color: var(--glean-white);
+  font-weight: 700;
+}
+
+.glean-people-role {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Bottom labels */
+.fed-bottom-label,
+.glean-bottom-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* ========================================
