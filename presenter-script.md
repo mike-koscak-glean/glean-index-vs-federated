@@ -95,13 +95,41 @@ MCP gives you openness. Glean gives you intelligence and governance. You need bo
 
 ---
 
-## Scene 7 — Final Comparison & Takeaway
+## Scene 7 — The Search Advantage
+**~30 seconds**
+
+Latency, relevance, coverage, governance, agent reliability — across every dimension that matters, the gap is stark. An indexed enterprise graph gives your agents a brain.
+
+But here's the thing: better search results and better AI answers? That's just the starting point. When you build a real knowledge graph — one that understands your content, your people, and how they connect — you unlock an entirely new category of intelligence.
+
+---
+
+## Scene 8 — Beyond Search
+**~50 seconds**
+
+This is what the enterprise graph makes possible. At the center is the same index — your content, permissions, people, and activity. But radiating out from it are capabilities that federated search can never deliver.
+
+**Agents** — not chatbots, real multi-step agents that reason over enterprise context, execute across systems, and take action. Triage a support ticket. Update your CRM. Draft a deal review. All grounded in the knowledge graph.
+
+**Prism** — Glean's real-time observability layer. It transforms unstructured signals from Gong, Slack, Jira, Salesforce into structured entity views. Account health. Deal risk. Renewal predictions. Not dashboards you build — intelligence that builds itself from the graph.
+
+**Personal Graph** — Glean infers what *you* are working on from your activity across every tool. Your tasks, your projects, your collaborators — a personal context layer that makes every interaction smarter.
+
+**Proactive Intelligence** — the graph doesn't wait for you to ask. It surfaces what matters: churn risk alerts, document recommendations, suggested next steps — before you even know to look.
+
+**Workflow Automation** — agents that trigger automatically. Event-driven, cross-system orchestration — not scripts, but intelligent workflows that adapt because they understand the business context underneath.
+
+Every one of these capabilities is grounded in the same permission-aware graph. No re-indexing. No re-integration. Each feature compounds on a single source of truth.
+
+---
+
+## Scene 9 — The Full Picture
 **~40 seconds**
 
-Latency, relevance, coverage, governance, agent reliability — across every dimension that matters, the gap is stark.
+Here's the full picture. At the base: 100+ enterprise systems. Above that: a unified, permission-aware index. On top: the enterprise knowledge graph — entities, relationships, and signals tuned on *your* data.
 
-Federated search gives you fragments. An indexed enterprise graph gives your agents a brain.
+And from that foundation, you ship an entire platform to every employee. Search. AI Assistant. Agents. Prism analytics. Workflow automation. Personal AI. All from one indexed, governed foundation.
 
-The question isn't whether MCP is useful — it is. The question is what's underneath it. If the answer is "live API calls and hope," you'll get inconsistent, slow, ungoverned results. If the answer is a deep, permission-aware index that understands your content, your people, and your business — you get AI that actually works.
+This is the difference between plugging into APIs and building real infrastructure. Federated gives your AI fragments. An enterprise graph gives it understanding.
 
-**Index once with Glean. Reuse everywhere.**
+**Index once. Unlock everything.**

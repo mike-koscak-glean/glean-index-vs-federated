@@ -4,7 +4,7 @@ An animated, click-through presentation that explains why enterprises need a dee
 
 ## What this is
 
-A single-page React app with 8 animated scenes you click (or arrow-key) through while narrating. Built for screen-sharing in customer conversations, internal enablement, and conference demos.
+A single-page React app with 10 animated scenes you click (or arrow-key) through while narrating. Built for screen-sharing in customer conversations, internal enablement, and conference demos.
 
 The narrative follows one enterprise question through two paths:
 
@@ -24,7 +24,9 @@ The narrative follows one enterprise question through two paths:
 | 4 | Agent on Federated | Noisy context window, garbage-in-garbage-out |
 | 5 | Agent on Glean | Curated context, composed answer with actions |
 | 6 | MCP + Glean | Architecture: MCP as access layer on top of Glean's graph |
-| 7 | Takeaway | Metric comparison, closing quote |
+| 7 | Search Win | Metric comparison, transition tease |
+| 8 | Beyond Search | Constellation: agents, Prism, personal graph, proactive intel, workflows |
+| 9 | Full Picture | Platform stack visual, closing tagline |
 
 ## Running locally
 

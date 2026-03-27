@@ -9,10 +9,12 @@ import { Scene4 } from './scenes/Scene4';
 import { Scene5 } from './scenes/Scene5';
 import { Scene6 } from './scenes/Scene6';
 import { Scene7 } from './scenes/Scene7';
+import { Scene8 } from './scenes/Scene8';
+import { Scene9 } from './scenes/Scene9';
 import './App.css';
 import './scenes/scenes.css';
 
-const TOTAL_STEPS = 8;
+const TOTAL_STEPS = 10;
 
 const STEP_LABELS = [
   'Question',
@@ -22,10 +24,12 @@ const STEP_LABELS = [
   'Agent + Fed.',
   'Agent + Glean',
   'MCP + Glean',
-  'Takeaway',
+  'Search Win',
+  'Beyond Search',
+  'Full Picture',
 ];
 
-const scenes = [Scene0, Scene1, Scene2, Scene3, Scene4, Scene5, Scene6, Scene7];
+const scenes = [Scene0, Scene1, Scene2, Scene3, Scene4, Scene5, Scene6, Scene7, Scene8, Scene9];
 
 export default function App() {
   const [currentStep, setCurrentStep] = useState(0);

@@ -1321,3 +1321,298 @@
   font-weight: 700;
   color: var(--glean-green);
 }
+
+/* Scene 7 transition tease */
+.transition-tease {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(216, 253, 73, 0.8);
+  letter-spacing: 0.3px;
+}
+
+/* ========================================
+   Scene 8 — Beyond Search Constellation
+   ======================================== */
+
+.constellation-layout {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  align-items: center;
+}
+
+.constellation-visual {
+  flex: 0 0 auto;
+  position: relative;
+  width: min(420px, 45vh);
+  aspect-ratio: 1;
+}
+
+.orbit-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.constellation-center {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+  padding: 20px;
+  overflow: visible;
+}
+
+.constellation-center-glow {
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(ellipse, rgba(52, 60, 237, 0.45) 0%, rgba(216, 253, 73, 0.12) 40%, transparent 70%);
+  animation: pulseGlow 3s ease-in-out infinite;
+  border-radius: 50%;
+}
+
+.constellation-center-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--glean-green);
+  text-align: center;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+.constellation-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+}
+
+.constellation-node-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.constellation-node-icon::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 18px;
+  background: radial-gradient(ellipse, var(--node-color, rgba(255,255,255,0.1)) 0%, transparent 70%);
+  opacity: 0.15;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.constellation-node-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.constellation-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 380px;
+}
+
+.constellation-detail-card {
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.constellation-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.constellation-detail-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ========================================
+   Scene 9 — Grand Finale
+   ======================================== */
+
+.finale-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  justify-content: center;
+}
+
+.finale-stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 700px;
+  align-items: center;
+}
+
+.finale-layer {
+  width: 100%;
+  padding: 16px 24px;
+  border: 1px solid;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.finale-layer-highlight {
+  border-width: 2px;
+}
+
+.finale-layer-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center, rgba(52, 60, 237, 0.3) 0%, rgba(216, 253, 73, 0.08) 50%, transparent 70%);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.finale-layer-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.finale-layer-label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.finale-layer-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 2px;
+}
+
+.finale-beam {
+  width: 3px;
+  height: 24px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--glean-green), var(--glean-blue));
+  transform-origin: bottom;
+  align-self: center;
+}
+
+.finale-products-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.finale-products-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.finale-products-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.finale-product-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid color-mix(in srgb, var(--chip-color, #fff) 30%, transparent);
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  overflow: hidden;
+}
+
+.finale-product-chip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--chip-color, #fff) 8%, transparent), transparent 60%);
+  pointer-events: none;
+}
+
+.finale-rise-particle {
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--glean-green);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.finale-message {
+  text-align: center;
+  max-width: 650px;
+}
+
+.finale-message-main {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.finale-message-sub {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 8px;
+  line-height: 1.6;
+}

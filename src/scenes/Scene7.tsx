@@ -16,11 +16,10 @@ export function Scene7() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        Step 7 — Final Comparison
+        Step 7 — The Search Advantage
       </motion.div>
 
       <div className="compare-grid">
-        {/* Header */}
         <div className="compare-header-row">
           <div className="compare-metric-label" />
           <div className="compare-col-header panel-header-red">MCP / Federated-only</div>
@@ -65,19 +64,18 @@ export function Scene7() {
         transition={{ delay: 2.2, duration: 0.6 }}
       >
         <p className="final-quote-main">
-          Federated search sprinkles data into your agents.<br />
-          An indexed enterprise graph gives them a <span className="final-highlight">brain</span>.
+          An indexed enterprise graph gives your agents a <span className="final-highlight">brain</span>.
         </p>
       </motion.div>
 
       <motion.div
-        className="final-tagline"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 3.0, type: 'spring' }}
+        className="transition-tease"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: [0, 0.7, 1], y: 0 }}
+        transition={{ delay: 3.0, duration: 1.0 }}
       >
-        <img src="https://app.glean.com/images/glean-logo2.svg" alt="Glean" style={{ width: 28, height: 28 }} />
-        Index once with Glean. Reuse everywhere.
+        <span className="material-symbols-rounded" style={{ fontSize: 20 }}>arrow_forward</span>
+        But better search is just the beginning of what an enterprise graph unlocks…
       </motion.div>
     </div>
   );
